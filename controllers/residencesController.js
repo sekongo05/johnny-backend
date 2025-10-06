@@ -46,7 +46,7 @@ exports.getResidences =(req,res)=>{
                   nom: 'Résidence Abatta Vue',
                   commune: 'Cocody',
                   prix: '100000',
-                  description: 'mmersion nature, vue sur les mangroves, déco minimaliste et silence absolu.'
+                  description: 'Immersion nature, vue sur les mangroves, déco minimaliste et silence absolu.'
             },
             {
                   id: 7,
@@ -130,6 +130,39 @@ exports.getResidences =(req,res)=>{
                   prix: '60000',
                   description: 'Appartements sécurisés avec climatisation, cuisine équipée, et balcon privé. Située à proximité des axes routiers, elle combine accessibilité et confort urbain.'
             },
+                    {
+                id: 17,
+                img: 'Images/residence.jpg',
+                nom: 'Résidence Ébène Sud',
+                commune: 'Yopougon',
+                prix: '75000',
+                description: 'Studios modernes avec accès sécurisé, cuisine ouverte, et espace vert commun. Idéal pour jeunes actifs recherchant confort et proximité des commerces.'
+                },
+                {
+                id: 18,
+                img: 'Images/residence.jpg',
+                nom: 'Résidence Cocody Prestige',
+                commune: 'Cocody',
+                prix: '120000',
+                description: 'Appartements haut standing avec ascenseur, parking privé, et sécurité 24h/24. À deux pas des écoles internationales et des centres commerciaux.'
+                },
+                {
+                id: 19,
+                img: 'Images/residence.jpg',
+                nom: 'Résidence Riviera Zen',
+                commune: 'Riviera',
+                prix: '95000',
+                description: 'Logements spacieux avec jardin privatif, salle de sport, et espace coworking. Parfait pour familles ou télétravailleurs en quête de sérénité.'
+                },
+                {
+                id: 20,
+                img: 'Images/residence.jpg',
+                nom: 'Résidence Marcory Horizon',
+                commune: 'Marcory',
+                prix: '85000',
+                description: 'Appartements lumineux avec terrasse, cuisine américaine, et accès rapide au Plateau. Un équilibre entre vie urbaine et confort résidentiel.'
+                }
+
     ]
     res.json(residences)
 
