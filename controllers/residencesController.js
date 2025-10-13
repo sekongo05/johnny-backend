@@ -1,12 +1,25 @@
+const db= require('../models/db')
 exports.getResidences =(req,res)=>{
-    const residences =[
+    db.query('SELECT * FROM residence', (err, resultat)=>{
+      if(err){
+            return res.status(500).json({error:'Erreur serveur'})
+      }
+      res.json(resultat)
+    })
+
+    
+}
+
+
+/* 
+  const residences =[
             {
                   id: 1,
                   img: 'Images/v1.jpg',
                   nom: 'Résidence Nova',
                   commune : 'Plateau',
                   prix: '150000',
-                  'description': 'La Résidence Nova allie design contemporain et confort absolu. Chaque appartement est équipé de la fibre optique, d’un mobilier épuré et d’une cuisine ouverte sur le salon. Idéale pour les professionnels en déplacement ou les couples en quête de modernité.'
+                  La Résidence Nova allie design contemporain et confort absolu. Chaque appartement est équipé de la fibre optique, d’un mobilier épuré et d’une cuisine ouverte sur le salon. Idéale pour les professionnels en déplacement ou les couples en quête de modernité.
             },
             {
                   id: 2,
@@ -14,7 +27,7 @@ exports.getResidences =(req,res)=>{
                   nom: 'Résidence Assinie Bleu',
                   commune : 'Assinie',
                   prix: '150000',
-                  description: 'À quelques pas de la plage, la Résidence Assinie Bleu vous plonge dans une ambiance tropicale. Piscine privée, hamac sous les palmiers, chambres ventilées et vue sur l’océan : le luxe discret d’un séjour balnéaire.'
+                   À quelques pas de la plage, la Résidence Assinie Bleu vous plonge dans une ambiance tropicale. Piscine privée, hamac sous les palmiers, chambres ventilées et vue sur l’océan : le luxe discret d’un séjour balnéaire.
             },
             {
                   id: 3,
@@ -164,12 +177,11 @@ exports.getResidences =(req,res)=>{
                 }
 
     ]
-    res.json(residences)
+    res.json(residences)  
 
-    
-}
 
-/* exports.postResidences= (req, res)=>{
-    const nouvelleResidence = req.body
-    res.status(201).json(nouvelleResidence)
-} */
+
+
+
+
+*/
