@@ -1,7 +1,9 @@
 const db= require('../models/db')
 exports.getResidences =(req,res)=>{
+       console.log('Route /residences appelée');
     db.query('SELECT * FROM residence', (err, resultat)=>{
       if(err){
+            console.log('Erreur SQL :', err);
             return res.status(500).json({error:'Erreur serveur'})
       }
       res.json(resultat)
@@ -27,7 +29,7 @@ exports.getResidences =(req,res)=>{
                   nom: 'Résidence Assinie Bleu',
                   commune : 'Assinie',
                   prix: '150000',
-                   À quelques pas de la plage, la Résidence Assinie Bleu vous plonge dans une ambiance tropicale. Piscine privée, hamac sous les palmiers, chambres ventilées et vue sur l’océan : le luxe discret d’un séjour balnéaire.
+                  description: À quelques pas de la plage, la Résidence Assinie Bleu vous plonge dans une ambiance tropicale. Piscine privée, hamac sous les palmiers, chambres ventilées et vue sur l’océan : le luxe discret d’un séjour balnéaire.
             },
             {
                   id: 3,
@@ -35,7 +37,7 @@ exports.getResidences =(req,res)=>{
                   nom: 'Résidence Ébène',
                   prix: '130000',
                   commune : 'Cocody',
-                  description: 'Nichée dans un quartier calme de Cocody, la Résidence Ébène offre un cadre verdoyant et apaisant. Avec ses 3 chambres climatisées, son jardin privé et son mobilier en bois noble, elle séduit les amateurs de raffinement et de sérénité.'
+                  Nichée dans un quartier calme de Cocody, la Résidence Ébène offre un cadre verdoyant et apaisant. Avec ses 3 chambres climatisées, son jardin privé et son mobilier en bois noble, elle séduit les amateurs de raffinement et de sérénité.
             },
              {
                   id: 4,
@@ -43,7 +45,7 @@ exports.getResidences =(req,res)=>{
                   nom: 'Résidence Connect',
                   commune: 'Cocody',
                   prix: '110.000',
-                  description: 'Pensée pour les séjours professionnels, la Résidence Connect propose des studios fonctionnels avec espace de travail, Wi-Fi haut débit, service de conciergerie et accès rapide aux zones d’affaires. Un confort discret, une efficacité maximale'
+                  Pensée pour les séjours professionnels, la Résidence Connect propose des studios fonctionnels avec espace de travail, Wi-Fi haut débit, service de conciergerie et accès rapide aux zones d’affaires. Un confort discret, une efficacité maximale'
             },
             {
                   id: 5,
@@ -51,7 +53,7 @@ exports.getResidences =(req,res)=>{
                   commune: 'Yopognon',
                   nom: 'Résidence Yop Sunset',
                   prix: '60000',
-                  description: 'Ambiance jeune et dynamique, studio cosy, terrasse ensoleillée et proximité des transports.'
+                  Ambiance jeune et dynamique, studio cosy, terrasse ensoleillée et proximité des transports.'
             },
             {
                   id: 6,
@@ -59,7 +61,7 @@ exports.getResidences =(req,res)=>{
                   nom: 'Résidence Abatta Vue',
                   commune: 'Cocody',
                   prix: '100000',
-                  description: 'Immersion nature, vue sur les mangroves, déco minimaliste et silence absolu.'
+                  Immersion nature, vue sur les mangroves, déco minimaliste et silence absolu.'
             },
             {
                   id: 7,
@@ -67,7 +69,7 @@ exports.getResidences =(req,res)=>{
                   nom: 'Résidence Laguna Pearl',
                   commune: 'Assinie',
                   prix: '75000',
-                  description: 'Située au bord de la lagune, avec ponton privé, bar lounge et chambres aux tons marins.'
+                  Située au bord de la lagune, avec ponton privé, bar lounge et chambres aux tons marins.'
             },
             {
                   id: 8,
@@ -75,7 +77,7 @@ exports.getResidences =(req,res)=>{
                   nom: 'Résidence Palmeraie Luxe',
                   commune: 'Cocody',
                   prix: '110000',
-                  description: 'Architecture coloniale revisitée, patio central, fontaine, et chambres décorées avec art local.'
+                  Architecture coloniale revisitée, patio central, fontaine, et chambres décorées avec art local.'
             },
             {
                   id: 9,
