@@ -9,7 +9,7 @@ console.log("DB_USER:", process.env.MYSQLUSER);
 console.log("DB_HOST:", process.env.MYSQLHOST);
 
 app.use(cors());
-const db = require('./models/db'); 
+
 
 const residenceRoute = require('./routes/residences');
 const reservationRoute = require('./routes/reservations')
