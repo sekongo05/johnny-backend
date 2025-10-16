@@ -1,4 +1,5 @@
 const db= require('../models/db')
+
 exports.getResidences =(req,res)=>{
        console.log('Route /residences appelée');
     db.query('SELECT * FROM residence', (err, resultat)=>{
